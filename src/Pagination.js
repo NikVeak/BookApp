@@ -42,11 +42,15 @@ const Pagination = ({pageLimit, books}) =>
             <h1 className="heading">Books in pagination</h1>
             <ul className="books-container">
                 {
-                    currentPageBooks.map(({id})=>
+                    currentPageBooks.map(({id, volumeInfo})=>
                     {
                         return(
                           <li key={id} className="book">
-                              {id}
+                              <h3>{volumeInfo['title']}</h3>
+                              <p></p>
+                              <a href={volumeInfo['infoLink']}>Узнать больше о книге</a>
+                              <p>Дата публикации: {volumeInfo['publishedData']}</p>
+                              <p>Категория: {volumeInfo['categories']}</p>
                           </li>
                         );
                     })

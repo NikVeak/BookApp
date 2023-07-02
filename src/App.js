@@ -15,11 +15,11 @@ const fetchData = async () =>
         console.log(response.data.items);
         let dat = response.data.items;
         let info = [];
-        for (let i = 0; i < dat.length;i++)
+        /*for (let i = 0; i < dat.length;i++)
         {
             info.push(dat[i].volumeInfo);
             console.log(info[i]);
-        }
+        }*/
         return response.data.items;
         //return info;
     }catch (error)

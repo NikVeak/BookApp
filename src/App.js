@@ -14,7 +14,7 @@ function App()
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [booksPerPage] = useState(10);
+    const [bookPerPage] = useState(2);
     useEffect(()=>
     {
         const getData = async () =>
@@ -37,18 +37,19 @@ function App()
     }, []);
 
     // последний индекс книги
-    const lastBookIndex = currentPage*booksPerPage;
+    const lastBookIndex = currentPage*bookPerPage;
     // первый индек книги
-    const firstBookIndex= lastBookIndex-booksPerPage;
+    const firstBookIndex= lastBookIndex-bookPerPage;
 
-    const currentBook = books.slice(firstBookIndex, lastBookIndex);
+    //const currentBook = books.slice(firstBookIndex, lastBookIndex);
 
 
     return (
     <div className="App">
         <Header/>
         <Books books={books} loading={loading}/>
-        <Pagination/>
+        <Pagination bookPerPage={bookPerPage}
+        totalBooks={books.length}/>
         <Footer/>
     </div>
   );

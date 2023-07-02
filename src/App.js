@@ -1,19 +1,20 @@
 //import logo from './logo.svg';
 import './App.css';
 import Header from './Header.js';
-import React, { Component }  from 'react';
+import React from 'react';
 import List from "./List.js";
+import Footer from './Footer.js';
 
 function App()
 {
   return (
     <div className="App">
-        <div>
             <Header/>
-        </div>
         <div className="Basis">
             <List/>
         </div>
+
+            <Footer/>
     </div>
   );
 }

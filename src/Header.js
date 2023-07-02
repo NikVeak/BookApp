@@ -7,8 +7,7 @@ class Header extends Component
 
     render()
     {
-        return
-        (
+        return(
             <header className={this.Name}>
                 <h1>Книги</h1>
             </header>

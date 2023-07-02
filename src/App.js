@@ -5,6 +5,7 @@ import Footer from './Footer.js';
 import Books from './Books.js';
 //import Pagination from "./Pagination.js";
 import axios from "axios";
+import Pagination from "./Pagination";
 
 
 const apiKey = "AIzaSyCqi37mzRrzkBrDZDb0BX9_IarX5iMOT88";
@@ -45,10 +46,10 @@ function App()
 
     return (
     <div className="App">
-            <Header/>
+        <Header/>
         <Books books={books} loading={loading}/>
-
-            <Footer/>
+        <Pagination/>
+        <Footer/>
     </div>
   );
 }

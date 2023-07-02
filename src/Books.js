@@ -32,3 +32,5 @@ const Books = ({books, loading}) =>
         </div>
     );
 }
+
+export default Books;

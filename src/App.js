@@ -20,6 +20,7 @@ function App()
             try
             {
                 setLoading(true);
+                // выполняем запрос к google books
                 const response = await
                     axios.get("https://www.googleapis.com/books/v1/volumes?q=search+terms");
                 console.log(response.data.items);
@@ -32,6 +33,15 @@ function App()
         };
         getData();
     }, []);
+
+    // последний индекс книги
+    const lastBookIndex = currentPage*booksPerPage;
+    // первый индек книги
+    const firstBookIndex= lastBookIndex-booksPerPage;
+
+    const currentBook = books.slice(firstBookIndex, lastBookIndex);
+
+
     return (
     <div className="App">
             <Header/>

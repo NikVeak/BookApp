@@ -60,21 +60,6 @@ const Pagination = ({pageLimit, books}) =>
                 >
                     Previous
                 </button>
-                <ul className="page-num-container list-style-none">
-                    {pageNumberGroup.map((value, index) => {
-                        return (
-                            <li
-                                className={`page-number ${
-                                    currentPageNow === value ? "active" : ""
-                                } `}
-                                key={index}
-                                onClick={() => changePageTo(value)}
-                            >
-                                {value}
-                            </li>
-                        );
-                    })}
-                </ul>
                 <button
                     disabled={currentPageNow === Math.floor(books.length / pageLimit)}
                     className={`page-change-btn ${

@@ -13,7 +13,15 @@ const fetchData = async () =>
         const response = await
             axios.get("https://www.googleapis.com/books/v1/volumes?q=search+terms"+ "&key=" + apiKey + "&maxResults=40 ");
         console.log(response.data.items);
+        let dat = response.data.items;
+        let info = [];
+        for (let i = 0; i < dat.length;i++)
+        {
+            info.push(dat[i].volumeInfo);
+            console.log(info[i]);
+        }
         return response.data.items;
+        //return info;
     }catch (error)
     {
         console.error(error);
@@ -34,7 +42,7 @@ function App()
     return (
     <div className="App">
             <Header/>
-        <Pagination pageLimit={10} books={7}/>
+        <Pagination pageLimit={10} books={books}/>
 
             <Footer/>
     </div>

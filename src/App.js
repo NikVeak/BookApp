@@ -41,15 +41,17 @@ function App()
     // первый индек книги
     const firstBookIndex= lastBookIndex-bookPerPage;
 
-    //const currentBook = books.slice(firstBookIndex, lastBookIndex);
+    const currentBook = books.slice(firstBookIndex, lastBookIndex);
 
-
+    const paginate = pageNumber => setCurrentPage(pageNumber);
     return (
     <div className="App">
         <Header/>
-        <Books books={books} loading={loading}/>
+        <Books books={currentBook} loading={loading}/>
         <Pagination bookPerPage={bookPerPage}
-        totalBooks={books.length}/>
+        totalBooks={books.length}
+        paginate={paginate}
+        />
         <Footer/>
     </div>
   );

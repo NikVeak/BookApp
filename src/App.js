@@ -2,7 +2,8 @@ import './App.css';
 import Header from './Header.js';
 import React, {useEffect, useState} from 'react';
 import Footer from './Footer.js';
-import Pagination from "./Pagination.js";
+import Books from './Books.js';
+//import Pagination from "./Pagination.js";
 import axios from "axios";
 
 
@@ -45,7 +46,7 @@ function App()
     return (
     <div className="App">
             <Header/>
-        <Pagination books={books} loading={loading}/>
+        <Books books={books} loading={loading}/>
 
             <Footer/>
     </div>

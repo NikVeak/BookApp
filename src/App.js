@@ -3,7 +3,6 @@ import Header from './Header.js';
 import React, {useEffect, useState} from 'react';
 import Footer from './Footer.js';
 import Books from './Books.js';
-//import Pagination from "./Pagination.js";
 import axios from "axios";
 import Pagination from "./Pagination";
 
@@ -11,10 +10,11 @@ import Pagination from "./Pagination";
 const apiKey = "AIzaSyCqi37mzRrzkBrDZDb0BX9_IarX5iMOT88";
 function App()
 {
+
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [bookPerPage] = useState(2);
+    const [bookPerPage] = useState(3);
     useEffect(()=>
     {
         const getData = async () =>

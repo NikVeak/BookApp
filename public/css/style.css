@@ -1,0 +1,63 @@
+
+ul.books-container
+{
+    display: flex;
+    margin-top: 3%;
+}
+li.book
+{
+    list-style-type: none;
+    display:inline-block;
+    width:300px;
+    height: 450px;
+    border-radius: 5px;
+    border: white solid 5px;
+    padding:10px;
+    margin-left:10%;
+}
+.subtitleBook
+{
+    font-size:10px;
+}
+.headBook
+{
+    background-color: darkslategrey;
+    border-radius: 15px;
+}
+
+.titleBook
+{
+    padding: 10px;
+    color: whitesmoke;
+    background-color: lightslategray;
+}
+
+.infoBook
+{
+    font-size: 12px;
+}
+.infoBook p
+{
+    margin-top: 3%;
+}
+
+ul.PaginationBook
+{
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 3%;
+}
+
+li.page-item
+{
+    display:inline-block;
+    list-style-type: none;
+    margin: 10px;
+    background-color: black;
+    padding:5px;
+    border-radius: 5px;
+}
+.headerName
+{
+    background-color: dimgrey;
+}

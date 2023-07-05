@@ -10,6 +10,9 @@ class Header extends Component
         return(
             <header className={this.Name}>
                 <h1>Книги</h1>
+                <form>
+                    <input placeholder="Поиск"/>
+                </form>
             </header>
         );
     }

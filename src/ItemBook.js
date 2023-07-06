@@ -15,7 +15,6 @@ const ItemBook = () =>{
             <p>{data['subtitle']}</p>
             <h6>Описание:</h6>
             <p>{data['description']}</p>
-
         </div>
     );
 }

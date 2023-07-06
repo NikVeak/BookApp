@@ -3,6 +3,7 @@ import Search from "./Search";
 import Books from "./Books";
 import Pagination from "./Pagination";
 import Footer from "./Footer";
+import Header from "./Header";
 import axios from "axios";
 
 const apiKey = "AIzaSyCqi37mzRrzkBrDZDb0BX9_IarX5iMOT88";
@@ -47,11 +48,7 @@ export default function Home()
     const paginate = pageNumber => setCurrentPage(pageNumber);
     return(
         <div>
-            <header className="headerName">
-                <h1>Поиск книг</h1>
-                <Search books={books}/>
-            </header>
-
+            <Header/>
             <Books books={currentBook} loading={loading}/>
             <Pagination bookPerPage={bookPerPage}
                         totalBooks={books.length}

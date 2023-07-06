@@ -1,14 +1,15 @@
 import React from "react";
-import {Routes, Route, useNavigate} from "react-route-dom";
 
+import ItemBook from "./ItemBook";
+
+
+const handleBook = () =>
+{
+    return (<ItemBook/>);
+
+}
 const Books = ({books, loading}) =>
 {
-    const navigate = useNavigate();
-
-    const navigateToItemBook = () =>
-    {
-        navigate("")
-    }
 
     if (loading)
     {
@@ -16,7 +17,7 @@ const Books = ({books, loading}) =>
         return <h2>Loading...</h2>
     }
     return(
-        <div>
+    <div>
             <ul className="books-container">
                 {
                     books.map(({id, volumeInfo})=>
@@ -25,21 +26,21 @@ const Books = ({books, loading}) =>
                             <li key={id} className="book">
                                 <div className="headBook">
                                     <h6 className="titleBook">{volumeInfo['title']}</h6>
-                                    <p className="subtitleBook">{volumeInfo['subtitle']}</p>
                                 </div>
-                                <img src={volumeInfo['imageLinks'].thumbnail}/>
+                                <img alt={`${volumeInfo['title']}`} src={`http://books.google.com/books/content?id=${id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`}/>
                                 <div className="infoBook">
-                                    <p>Дата публикации: {volumeInfo['publishedDate']}</p>
                                     <p>Автор: {volumeInfo['authors']}</p>
-
-                                    <a className="link_book" onClick={navigateToItemBook}>Узнать больше о книге</a>
+                                    <button id={id} onClick={handleBook}>Подробнее</button>
                                 </div>
                             </li>
+
                         );
                     })
                 }
+
             </ul>
-        </div>
+    </div>
+
     );
 }
 

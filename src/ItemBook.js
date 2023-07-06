@@ -1,9 +1,10 @@
 import React from "react";
+import {useParams} from "react-router-dom";
 
-const ItemBook = (data) =>{
+const ItemBook = () =>{
     return(
         <div>
-
+            <h1>Book</h1>
         </div>
     );
 }

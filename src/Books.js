@@ -1,13 +1,8 @@
 import React from "react";
 
-import ItemBook from "./ItemBook";
+import {Link} from "react-router-dom";
 
 
-const handleBook = () =>
-{
-    return (<ItemBook/>);
-
-}
 const Books = ({books, loading}) =>
 {
 
@@ -30,7 +25,9 @@ const Books = ({books, loading}) =>
                                 <img alt={`${volumeInfo['title']}`} src={`http://books.google.com/books/content?id=${id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`}/>
                                 <div className="infoBook">
                                     <p>Автор: {volumeInfo['authors']}</p>
-                                    <button id={id} onClick={handleBook}>Подробнее</button>
+                                    <Link to="/book"
+                                        state={{info:volumeInfo, id: id}}
+                                    >Подробнее</Link>
                                 </div>
                             </li>
 

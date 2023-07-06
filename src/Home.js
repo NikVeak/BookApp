@@ -47,6 +47,10 @@ export default function Home()
     const paginate = pageNumber => setCurrentPage(pageNumber);
     return(
         <div>
+            <header className="headerName">
+                <h1>Поиск книг</h1>
+                <Search books={books}/>
+            </header>
 
             <Books books={currentBook} loading={loading}/>
             <Pagination bookPerPage={bookPerPage}

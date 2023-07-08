@@ -8,14 +8,13 @@ const Pagination = ({bookPerPage, totalBooks, paginate})=>
     {
         pageNumbers.push(i);
     }
-    console.log("lol=", pageNumbers);
     return(
         <div>
             <ul className="PaginationBook">
                 {
                     pageNumbers.map(number=> (
                             <li className="page-item" key={number}>
-                                <a href="!#" className="page-link" onClick={()=>
+                                <a href="#" className="page-link" onClick={()=>
                                     paginate(number)
                                 }>
                                     {

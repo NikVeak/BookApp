@@ -27,17 +27,16 @@ const Search = ({books})=>
     }, [enter]);
     const handleChange = event =>
     {
-        if (event.target.value === "")
-        {
-            setShowResults(false);
-        }
         console.log(event.target.value);
         setEnter(event.target.value);
     }
 
     const handleBlur = event =>
     {
-        setShowResults(false);
+        setTimeout(()=>
+        {
+            setShowResults(false);
+        }, 10);
     }
     return(
         <div className="divResult">
@@ -49,15 +48,23 @@ const Search = ({books})=>
                 showResults ?
                 <div className="resultSearch">
                     {
-                        result.map((value, index)=>
-                        {
-                            return(<ul className="listResult">
-                                <li>
-                                    <Link className="linkStyle" to="/book" state={{info:value['volumeInfo'], id: value['id']}} >{value['volumeInfo'].title}</Link>
-                                    <hr/>
-                                    </li>
-                            </ul>)
-                        })
+                        <ul className="listResult">
+                            {
+                                result.map((value, index)=>
+                                {
+                                    return(
+                                            <li key = {value['id']}>
+                                                <div className="blockResult">
+                                                <img id="imgLink" alt={value['volumeInfo'].title} style={{width: '70px', height: '100px'}} className="image"  src={`http://books.google.com/books/content?id=${value['id']}&printsec=frontcover&img=1&zoom=1&source=gbs_api`}/>
+                                                <Link onClick={handleBlur} className="pageLink" to="/book" state={{info:value['volumeInfo'], id: value['id']}}>
+                                                        {value['volumeInfo'].title}
+                                                    </Link>
+                                                </div>
+                                            </li>
+                                    );
+                                })
+                            }
+                        </ul>
                     }
             </div> : null}
         </div>

@@ -1,9 +1,17 @@
-import React  from "react";
+import React, {useEffect} from "react";
 
 const Bag = () =>
 {
+    const printInfo = () =>
+    {
+
+    }
+
     return(
-        <div></div>
+        <div>
+            {
+            }
+        </div>
     );
 }
 

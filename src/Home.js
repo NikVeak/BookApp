@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react'
-import Search from "./Search";
 import Books from "./Books";
 import Pagination from "./Pagination";
 import Footer from "./Footer";

@@ -7,7 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #282c34;
   color:whitesmoke;
-
+  background-image: url("images/backfon.png");
+  background-repeat: no-repeat;
 }
 
 code {

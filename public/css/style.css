@@ -9,33 +9,97 @@ li.book
     list-style-type: none;
     display:inline-block;
     width:400px;
-    height: 390px;
+    height: 410px;
     border-radius: 5px;
-    border: white solid 5px;
+    border: grey solid 3px;
     padding:10px;
     margin-left:5%;
 }
+
+.headerName
+{
+    background: rgb(29,28,32);
+    background: linear-gradient(90deg, rgba(29,28,32,1) 0%, rgba(5,5,28,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.addBag
+{
+    font-size:14px;
+    text-decoration: none;
+    padding:10px;
+    background-color: #0b670b;
+    color:whitesmoke;
+}
+
 .subtitleBook
 {
     font-size:10px;
 }
+
 .headBook
 {
-    background-color: darkslategrey;
+    background-color: #162121;
     border-radius: 15px;
+}
+
+.book
+{
+    background-color: #0c1717;
+    box-shadow: -3px 5px 10px 7px rgba(0, 0, 0, .4);
+
+}
+
+.pageLink
+{
+    font-size: 13px;
+    text-decoration: none;
+}
+
+div.blockResult
+{
+   height: 100px;
+    border-bottom: #61dafb 5px;
+}
+
+.pageLink:hover
+{
+    color: #cf0000;
+}
+.pageLink:active
+{
+    color: #0c1717;
 }
 
 .titleBook
 {
     padding: 10px;
     color: whitesmoke;
-    background-color: lightslategray;
+    background-color: #4371a2;
+    border-radius: 5px;
+    margin-top: 3%;
+}
+
+#imgLink
+{
+    float:left;
+    margin:5px;
+}
+
+.author
+{
+    padding: 10px;
+    color: whitesmoke;
+    background-color: #5b666c;
+    border-radius: 5px;
+    margin-top: 3%;
+    font-size:14px;
 }
 
 .infoBook
 {
     font-size: 12px;
 }
+
 .infoBook p
 {
     margin-top: 3%;
@@ -57,6 +121,7 @@ li.page-item
     padding:5px;
     border-radius: 5px;
 }
+
 .headerName
 {
     background-color: dimgrey;
@@ -69,8 +134,8 @@ li.page-item
     top: 5%;
     display: inline-block;
     margin-right:30px;
-    width: 200px;
-
+    width: 300px;
+    border-radius: 5px;
 }
 
 header
@@ -82,14 +147,16 @@ div.resultSearch
 {
     z-index: 999;
     position: absolute;
-    background-color: whitesmoke;
+    background-color: #21272a;
     color:black;
-    width:200px;
+    width:300px;
+    padding:5px;
     height: 200px;
     overflow: scroll;
     overflow-x: auto;
     right: 5%;
     top: 10%;
+    opacity: 0.99;
     box-shadow: -3px 5px 10px 7px rgba(0, 0, 0, .4);
     /*visibility: hidden;*/
 }
@@ -97,18 +164,152 @@ div.resultSearch
 .listResult li
 {
     list-style-type: none;
+    font-size:10px;
+    text-align: left;
+    height:100px;
+    margin-top: 10px;
 }
 
-.linkStyle
+.wrapper
 {
-    text-decoration: none;
-    font-size:14px;
-    color: black;
+    width:100%;
 }
 
-.linkStyle:hover
+.descriptionDiv
 {
-    text-decoration: none;
-    color:#cf0000;
-    border-bottom-color: rgba(208, 64, 0, 0.2);
+    width:100%;
+    background-color: #2a2828;
+    padding:10px 80px;
+    text-align: justify;
+    display: block;
+    margin-left: 2%;
+    border-radius: 3px;
+    margin-top:4%;
+    text-indent:30px;
+    line-height: 1.5;
+}
+
+.headDiv
+{
+    background-color: #4d5357;
+    width: 100%;
+    margin-left: 2%;
+    padding:40px 70px;
+    border-radius: 3px;
+    height:auto;
+    overflow: hidden;
+}
+
+.leftDiv
+{
+    text-align: left;
+}
+
+h3
+{
+    text-align: center;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+h6
+{
+    font-style: italic;
+}
+
+.wrapperBook
+{
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 50px 300px;
+    border-radius: 3px;
+    background: rgb(29,28,32);
+    background: linear-gradient(90deg, rgba(29,28,32,1) 0%, rgba(42,21,9,1) 51%, rgba(0,212,255,1) 100%);
+    box-shadow: -3px 5px 10px 7px rgba(0, 0, 0, .4);
+}
+
+.image
+{
+    float:right;
+}
+
+@media screen and (max-width:580px)
+{
+    .inputBook
+    {
+        margin-top: 10px;
+        width:200px;
+        position: absolute;
+        float: none;
+        right: 15%;
+    }
+    div.resultSearch
+    {
+        right:15%;
+    }
+
+    .descriptionDiv
+    {
+        background-color: #2a2828;
+        padding:2px 8px;
+        text-align: justify;
+        margin-left: 2%;
+        border-radius: 3px;
+        margin-top:4%;
+        text-indent:30px;
+        line-height: 1.5;
+        font-size:13px;
+
+    }
+
+    .headDiv
+    {
+        background-color: #4d5357;
+         margin-left: 2%;
+        padding:2px 7px;
+        border-radius: 3px;
+        font-size:13px;
+    }
+
+    .wrapper
+    {
+        width:100%;
+        margin: 0;
+    }
+    .headerName
+    {
+        width:100%;
+    }
+    ul.books-container
+    {
+        display: block;
+        margin-top: 3%;
+    }
+    li.book
+    {
+        list-style-type: none;
+        height: auto;
+        border-radius: 5px;
+        border: grey solid 3px;
+        padding:10px;
+        margin-top: 3%;
+        margin-right: 10%;
+        width:90%;
+    }
+    .book
+    {
+        margin: 0;
+    }
+
+    div.wrapperBook
+    {
+        border-radius: 3px;
+        background: rgb(29,28,32);
+        background: linear-gradient(90deg, rgba(29,28,32,1) 0%, rgba(42,21,9,1) 51%, rgba(0,212,255,1) 100%);
+        box-shadow: -3px 5px 10px 7px rgba(0, 0, 0, .4);
+        margin:0;
+        padding: 10px;
+    }
 }

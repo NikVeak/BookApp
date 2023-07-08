@@ -64,7 +64,9 @@ li.page-item
 
 .inputBook
 {
-    float:right;
+    position: absolute;
+    right: 3%;
+    top: 5%;
     display: inline-block;
     margin-right:30px;
     width: 200px;
@@ -80,13 +82,14 @@ div.resultSearch
 {
     z-index: 999;
     font-size:12px;
-    position: relative;
+    position: absolute;
     background-color: whitesmoke;
     color:black;
     width:200px;
     height: 200px;
     overflow: scroll;
     overflow-x: auto;
-    float:right;
+    right: 5%;
+    top: 10%;
     /*visibility: hidden;*/
 }

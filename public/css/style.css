@@ -93,3 +93,8 @@ div.resultSearch
     top: 10%;
     /*visibility: hidden;*/
 }
+
+.listResult li
+{
+    list-style-type: none;
+}

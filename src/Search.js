@@ -1,5 +1,6 @@
-import React, {createRef} from "react";
+import React from "react";
 import {useState, useEffect} from "react";
+import {Link} from "react-router-dom";
 
 const Search = ({books})=>
 {
@@ -14,7 +15,7 @@ const Search = ({books})=>
            if (books[i].volumeInfo['title'].toLowerCase().includes(enter.toLowerCase()))
            {
                console.log(books[i].volumeInfo['title']);
-               res.push(books[i].volumeInfo['title']);
+               res.push(books[i]);
            }
         }
         if (res.length > 0)
@@ -44,8 +45,11 @@ const Search = ({books})=>
                     {
                         result.map((value, index)=>
                         {
-                            return(<ul>
-                                <li>{value}<hr/></li>
+                            return(<ul className="listResult">
+                                <li>
+                                    <Link to="/book" state={{info:value['volumeInfo'], id: value['id']}} >{value['volumeInfo'].title}</Link>
+                                    <hr/>
+                                    </li>
                             </ul>)
                         })
                     }

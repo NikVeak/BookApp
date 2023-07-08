@@ -7,13 +7,13 @@ const Header = ({books}) =>
 {
     return(
         <header className="headerName">
-            <h1>Просмотр книг</h1>
-            <div>
-                <img src={logoBag} alt=""/>
-                <Link to="/bag">
+            <div className="barDiv">
+                <img id="imgBag" src={logoBag} alt=""/>
+                <Link id="linkBag" to="/bag">
                     Избранное
                 </Link>
             </div>
+            <h1>Просмотр книг</h1>
             <Search books={books}/>
         </header>
 

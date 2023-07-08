@@ -189,6 +189,33 @@ div.resultSearch
     line-height: 1.5;
 }
 
+.barDiv
+{
+    float:right;
+    margin-right: 5%;
+    margin-bottom: 7%;
+    background-color: #4371a2;
+    border-radius: 5px;
+}
+
+#imgBag
+{
+    margin-bottom: 7%;
+}
+
+#linBag:hover
+{
+    color: #cf0000;
+}
+
+#linkBag
+{
+    text-decoration: none;
+    font-size: 24px;
+    color:ivory;
+    margin-left: 10px;
+}
+
 .headDiv
 {
     background-color: #4d5357;

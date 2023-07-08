@@ -5,7 +5,7 @@ const Search = ({books})=>
 {
     const [enter, setEnter] = useState("");
     const [result, setResult] = useState([]);
-    const
+    const [showResults, setShowResults] = useState(false)
     useEffect(()=>
     {
         let res = [];
@@ -17,24 +17,39 @@ const Search = ({books})=>
                res.push(books[i].volumeInfo['title']);
            }
         }
+        if (res.length > 0)
+        {
+            setShowResults(true);
+        }
         console.log(res);
         setResult(res);
     }, [enter]);
     const handleChange = event =>
     {
+        if (event.target.value === "")
+        {
+            setShowResults(false);
+        }
         console.log(event.target.value);
-
+        setEnter(event.target.value);
     }
     return(
         <div className="divResult">
             <input type="text"
-                   value={enter} onChange={handleChange} className="inputBook" placeholder="Поиск"/>
-            <div className="resultSearch">{result.map((value, index)=>{
-                return(
-                    <ul>
-                        <li>{value}<hr/></li>
-                    </ul>);
-            })}</div>
+                   value={enter} onChange={handleChange}
+                   className="inputBook" placeholder="Поиск"/>
+            {
+                showResults ?
+                <div className="resultSearch">
+                    {
+                        result.map((value, index)=>
+                        {
+                            return(<ul>
+                                <li>{value}<hr/></li>
+                            </ul>)
+                        })
+                    }
+            </div> : null}
         </div>
     );
 }

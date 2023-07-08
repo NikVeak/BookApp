@@ -67,6 +67,8 @@ li.page-item
     float:right;
     display: inline-block;
     margin-right:30px;
+    width: 200px;
+
 }
 
 header
@@ -77,13 +79,14 @@ header
 div.resultSearch
 {
     z-index: 999;
-    position: absolute;
     font-size:12px;
+    position: relative;
     background-color: whitesmoke;
     color:black;
-    width:120px;
+    width:200px;
     height: 200px;
     overflow: scroll;
     overflow-x: auto;
-    visibility: hidden;
+    float:right;
+    /*visibility: hidden;*/
 }

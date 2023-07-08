@@ -81,7 +81,6 @@ header
 div.resultSearch
 {
     z-index: 999;
-    font-size:12px;
     position: absolute;
     background-color: whitesmoke;
     color:black;
@@ -91,10 +90,25 @@ div.resultSearch
     overflow-x: auto;
     right: 5%;
     top: 10%;
+    box-shadow: -3px 5px 10px 7px rgba(0, 0, 0, .4);
     /*visibility: hidden;*/
 }
 
 .listResult li
 {
     list-style-type: none;
+}
+
+.linkStyle
+{
+    text-decoration: none;
+    font-size:14px;
+    color: black;
+}
+
+.linkStyle:hover
+{
+    text-decoration: none;
+    color:#cf0000;
+    border-bottom-color: rgba(208, 64, 0, 0.2);
 }

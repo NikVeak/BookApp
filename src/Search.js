@@ -34,10 +34,16 @@ const Search = ({books})=>
         console.log(event.target.value);
         setEnter(event.target.value);
     }
+
+    const handleBlur = event =>
+    {
+        setShowResults(false);
+    }
     return(
         <div className="divResult">
             <input type="text"
                    value={enter} onChange={handleChange}
+                   onBlur={handleBlur}
                    className="inputBook" placeholder="Поиск"/>
             {
                 showResults ?
@@ -47,7 +53,7 @@ const Search = ({books})=>
                         {
                             return(<ul className="listResult">
                                 <li>
-                                    <Link to="/book" state={{info:value['volumeInfo'], id: value['id']}} >{value['volumeInfo'].title}</Link>
+                                    <Link className="linkStyle" to="/book" state={{info:value['volumeInfo'], id: value['id']}} >{value['volumeInfo'].title}</Link>
                                     <hr/>
                                     </li>
                             </ul>)

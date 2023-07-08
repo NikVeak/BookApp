@@ -12,11 +12,22 @@ const Search = ({books})=>
         let res = [];
         for (let i = 0; i < books.length; i++)
         {
-           if (books[i].volumeInfo['title'].toLowerCase().includes(enter.toLowerCase()))
-           {
-               console.log(books[i].volumeInfo['title']);
-               res.push(books[i]);
-           }
+            if (books[i].volumeInfo['authors'] === undefined)
+            {
+                if (books[i].volumeInfo['title'].toLowerCase().includes(enter.toLowerCase()))
+                {
+                    console.log(books[i].volumeInfo['title']);
+                    res.push(books[i]);
+                }
+            }else
+            {
+                if (books[i].volumeInfo['title'].toLowerCase().includes(enter.toLowerCase())
+                || books[i].volumeInfo['authors'][0].toLowerCase().includes(enter.toLowerCase()))
+                {
+                    console.log(books[i].volumeInfo['title']);
+                    res.push(books[i]);
+                }
+            }
         }
         if (res.length > 0)
         {
@@ -36,7 +47,7 @@ const Search = ({books})=>
         setTimeout(()=>
         {
             setShowResults(false);
-        }, 10);
+        }, 1000);
     }
     return(
         <div className="divResult">

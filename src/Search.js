@@ -1,24 +1,40 @@
-import React from "react";
+import React, {createRef} from "react";
 import {useState, useEffect} from "react";
 
-const Search = ()=>
+const Search = ({books})=>
 {
     const [enter, setEnter] = useState("");
     const [result, setResult] = useState([]);
-
+    const
     useEffect(()=>
     {
-
-    }, []);
+        let res = [];
+        for (let i = 0; i < books.length; i++)
+        {
+           if (books[i].volumeInfo['title'].toLowerCase().includes(enter.toLowerCase()))
+           {
+               console.log(books[i].volumeInfo['title']);
+               res.push(books[i].volumeInfo['title']);
+           }
+        }
+        console.log(res);
+        setResult(res);
+    }, [enter]);
     const handleChange = event =>
     {
-        setEnter(event.target.value);
         console.log(event.target.value);
+
     }
     return(
         <div className="divResult">
             <input type="text"
                    value={enter} onChange={handleChange} className="inputBook" placeholder="Поиск"/>
+            <div className="resultSearch">{result.map((value, index)=>{
+                return(
+                    <ul>
+                        <li>{value}<hr/></li>
+                    </ul>);
+            })}</div>
         </div>
     );
 }

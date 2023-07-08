@@ -73,3 +73,17 @@ header
 {
     height: 100px;
 }
+
+div.resultSearch
+{
+    z-index: 999;
+    position: absolute;
+    font-size:12px;
+    background-color: whitesmoke;
+    color:black;
+    width:120px;
+    height: 200px;
+    overflow: scroll;
+    overflow-x: auto;
+    visibility: hidden;
+}

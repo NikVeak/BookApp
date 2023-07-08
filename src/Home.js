@@ -48,7 +48,7 @@ export default function Home()
     const paginate = pageNumber => setCurrentPage(pageNumber);
     return(
         <div>
-            <Header/>
+            <Header books={books}/>
             <Books books={currentBook} loading={loading}/>
             <Pagination bookPerPage={bookPerPage}
                         totalBooks={books.length}

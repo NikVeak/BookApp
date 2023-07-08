@@ -13,6 +13,8 @@ const ItemBook = () =>{
             <img alt={`${data['title']}`} src={`http://books.google.com/books/content?id=${id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`}/>
             <h4>Подзаголовок:</h4>
             <p>{data['subtitle']}</p>
+            <p>Дата публикации: {data['publishedDate']}</p>
+            <p>Количество страниц: {data['pageCount']}</p>
             <h6>Описание:</h6>
             <p>{data['description']}</p>
         </div>

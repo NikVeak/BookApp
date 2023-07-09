@@ -1,5 +1,5 @@
 import React from "react";
-import {useLocation, useParams} from "react-router-dom";
+import {Link, useLocation, useParams} from "react-router-dom";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -22,6 +22,9 @@ const ItemBook = () =>{
             <div className="descriptionDiv">
                 <h6>Описание:</h6>
                 <p>{data['description']}</p>
+            </div>
+            <div id="backDiv">
+                <Link id="backLink" to="/">Назад</Link>
             </div>
             <hr/>
             <Footer/>

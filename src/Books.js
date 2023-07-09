@@ -8,11 +8,20 @@ const Books = ({books, loading}) =>
 
     useEffect(()=>
     {
+        for (let i = 0; i < books.length;i++)
+        {
+            if (books[i].id === data)
+            {
+                setData(books[i]);
+                console.log(books[i]);
+            }
+        }
        localStorage.setItem("data", JSON.stringify(data));
     }, [data]);
-    const handleAddBag = () =>
+    const handleAddBag = (event) =>
     {
-        setData(data);
+        setData(event.target.id);
+        console.log(event.target.id);
     }
 
     if (loading)
@@ -27,7 +36,7 @@ const Books = ({books, loading}) =>
                     books.map(({id, volumeInfo})=>
                     {
                         return(
-                            <li key={id} className="book">
+                            <li id={id} key={id} className="book">
                                 <img alt={`${volumeInfo['title']}`} src={`http://books.google.com/books/content?id=${id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`}/>
                                 <div className="headBook">
                                     <h6 className="titleBook">{volumeInfo['title']}</h6>
@@ -39,9 +48,8 @@ const Books = ({books, loading}) =>
                                     >Подробнее</Link>
                                 </div>
                                 <br/>
-                                <button className="addBag" onClick={handleAddBag}>В избранное</button>
+                                <button id={id} className="addBag" onClick={handleAddBag}>В избранное</button>
                             </li>
-
                         );
                     })
                 }

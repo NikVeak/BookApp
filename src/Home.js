@@ -6,15 +6,13 @@ import Header from "./components/Header";
 import axios from "axios";
 
 const apiKey = "AIzaSyCqi37mzRrzkBrDZDb0BX9_IarX5iMOT88";
-export default function Home()
+const Home = () =>
 {
 
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [bookPerPage] = useState(3);
-
-
 
     useEffect(()=>
     {
@@ -58,3 +56,4 @@ export default function Home()
 
     )
 }
+export default Home;

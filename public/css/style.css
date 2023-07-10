@@ -9,26 +9,52 @@ li.book
     list-style-type: none;
     display:inline-block;
     width:400px;
-    height: 410px;
+    height: 450px;
     border-radius: 5px;
     border: grey solid 3px;
     padding:10px;
     margin-left:5%;
 }
 
+.favBook:hover
+{
+    background-color: #87e57e;
+    transition: 0.7s;
+}
+.icon
+{
+    border-radius: 10px;
+    padding:5px;
+    margin-right:10px;
+}
+
 .favBook
 {
+    border: none;
     font-size: 14px;
     font-style: revert;
     padding:10px;
-    border-radius: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    font-family: "Baskerville Old Face";
+    color:white;
+    position: relative;
+    outline: none;
+    text-align: center;
 }
 
 .headerName
 {
+
     height:100px;
     background: rgb(29,28,32);
     background: linear-gradient(90deg, rgba(29,28,32,1) 0%, rgba(5,5,28,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .addBag
@@ -55,19 +81,22 @@ li.book
 {
     background-color: #0c1717;
     box-shadow: -3px 5px 10px 7px rgba(0, 0, 0, .4);
+    opacity: 0;
+    animation: ani 1.5s forwards;
+}
 
+
+
+div.blockResult
+{
+   height: 100px;
+    border-bottom: #61dafb 5px;
 }
 
 .pageLink
 {
     font-size: 13px;
     text-decoration: none;
-}
-
-div.blockResult
-{
-   height: 100px;
-    border-bottom: #61dafb 5px;
 }
 
 .pageLink:hover
@@ -133,12 +162,37 @@ li.page-item
 
 #backLink
 {
+    width:130px;
     text-decoration: none;
     font-size: 24px;
-    padding:10px;
     background-color: #0c1717;
-    color:white;
-    border-radius: 5px;
+    display: block;
+    font-family: Arial;
+    border: #1071FF 1px solid;
+    color: #1071FF;
+    padding: 5px 25px;
+    margin: 20px auto;
+    transition: .5s;
+    border-radius: 0px;
+}
+
+#backLink:hover
+{
+    margin: 20px auto;
+    opacity:1;
+    top: 5px;
+    transition: .5s;
+    color: #10FF58;
+    border: #10FF58 1px solid;
+    border-radius: 10px;
+}
+
+#backLink:active
+{
+    color: #000;
+    border: #1A1A1A 1px solid;
+    transition: .07s;
+    background-color: #FFF;
 }
 
 #backDiv
@@ -207,25 +261,11 @@ div.resultSearch
     margin-top:4%;
     text-indent:30px;
     line-height: 1.5;
+    animation: ani 3s forwards;
+    box-shadow: -3px 5px 10px 7px rgba(0, 0, 0, .4);
+
 }
 
-.barDiv
-{
-    position: absolute;
-    right: 10%;
-    top:2%;
-    margin-right: 5%;
-    margin-bottom: 7%;
-    background-color: #189bd0;
-    border-radius: 5px;
-    padding: 5px;
-    box-shadow: #4d5357 5px -5px 7px 10px;
-}
-
-#imgBag
-{
-    margin-bottom: 7%;
-}
 
 #linkBag:hover
 {
@@ -242,13 +282,15 @@ div.resultSearch
 
 .headDiv
 {
-    background-color: #4d5357;
+    background-color: #1c1010;
     width: 100%;
     margin-left: 2%;
     padding:40px 70px;
     border-radius: 3px;
     height:auto;
     overflow: hidden;
+    box-shadow: -3px 5px 10px 7px rgba(0, 0, 0, .4);
+
 }
 
 .leftDiv
@@ -276,9 +318,8 @@ h6
     margin-right: 50px;
     padding: 50px 300px;
     border-radius: 3px;
-    background: rgb(29,28,32);
-    background: linear-gradient(90deg, rgba(29,28,32,1) 0%, rgba(42,21,9,1) 51%, rgba(0,212,255,1) 100%);
-    box-shadow: -3px 5px 10px 7px rgba(0, 0, 0, .4);
+    /*background: rgb(29,28,32);
+    background: linear-gradient(90deg, rgba(29,28,32,1) 0%, rgba(42,21,9,1) 51%, rgba(0,212,255,1) 100%);*/
 }
 
 .image

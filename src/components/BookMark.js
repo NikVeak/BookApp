@@ -21,14 +21,22 @@ const BookmarkButton = ({id}) => {
     };
 
     return (
-        <button
+        <div>
+            <button
             style={{
-                backgroundColor: isBookmarked ? 'red' : 'green'
-            }}
-            className="favBook" onClick={handleBookmarkClick}>
-            {isBookmarked ? "Удалить из избранного" : "Добавить в избранное"}
+                    backgroundColor: isBookmarked ? 'red' : 'green'
+                }}
+                className="favBook" onClick={handleBookmarkClick}>
+                <button
+                    style={{
+                        backgroundColor: isBookmarked ? 'orangered':'greenyellow'
+                    }}
+                    className="icon">&#10084;</button>
+                {isBookmarked ? "Удалить из избранного" : "Добавить в избранное"}
 
-        </button>
+            </button>
+        </div>
+
     );
 };
 

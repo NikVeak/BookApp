@@ -31,7 +31,7 @@ const Books = ({books, loading}) =>
                                     >Подробнее</Link>
                                 </div>
                                 <br/>
-                                <BookMark/>
+                                <BookMark id={id}/>
                             </li>
                         );
                     })

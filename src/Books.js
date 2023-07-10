@@ -1,28 +1,11 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {Link} from "react-router-dom";
+import {useLocalStorage} from "./useLocalStorage";
+import BookMark from "./components/BookMark";
 
 
 const Books = ({books, loading}) =>
 {
-    const [data, setData] = useState("");
-
-    useEffect(()=>
-    {
-        for (let i = 0; i < books.length;i++)
-        {
-            if (books[i].id === data)
-            {
-                setData(books[i]);
-                console.log(books[i]);
-            }
-        }
-       localStorage.setItem("data", JSON.stringify(data));
-    }, [data]);
-    const handleAddBag = (event) =>
-    {
-        setData(event.target.id);
-        console.log(event.target.id);
-    }
 
     if (loading)
     {
@@ -48,7 +31,7 @@ const Books = ({books, loading}) =>
                                     >Подробнее</Link>
                                 </div>
                                 <br/>
-                                <button id={id} className="addBag" onClick={handleAddBag}>В избранное</button>
+                                <BookMark/>
                             </li>
                         );
                     })

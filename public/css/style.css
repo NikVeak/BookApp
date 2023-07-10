@@ -18,7 +18,7 @@ li.book
 
 .headerName
 {
-    height:150px;
+    height:100px;
     background: rgb(29,28,32);
     background: linear-gradient(90deg, rgba(29,28,32,1) 0%, rgba(5,5,28,1) 35%, rgba(0,212,255,1) 100%);
 }
@@ -147,7 +147,7 @@ li.page-item
 {
     position: absolute;
     right: 3%;
-    top: 12%;
+    top: 2%;
     display: inline-block;
     margin-right:30px;
     width: 300px;
@@ -286,10 +286,12 @@ h6
         width:200px;
         position: absolute;
         float: none;
-        right: 35%;
+        top:10%;
+        right: 20%;
     }
     div.resultSearch
     {
+        top:17%;
         right:15%;
     }
 
@@ -359,7 +361,7 @@ h6
     .barDiv
     {
         position: absolute;
-        right: 5%;
+        right: 4%;
         top:10%;
         margin-right: 5%;
         margin-bottom: 7%;

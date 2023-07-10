@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import Books from "./Books";
-import Pagination from "./Pagination";
-import Footer from "./Footer";
-import Header from "./Header";
+import Pagination from "./components/Pagination";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import axios from "axios";
 
 const apiKey = "AIzaSyCqi37mzRrzkBrDZDb0BX9_IarX5iMOT88";

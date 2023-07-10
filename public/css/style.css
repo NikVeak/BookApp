@@ -9,7 +9,7 @@ li.book
     list-style-type: none;
     display:inline-block;
     width:400px;
-    height: 450px;
+    height: 500px;
     border-radius: 5px;
     border: grey solid 3px;
     padding:10px;
@@ -112,7 +112,7 @@ div.blockResult
 {
     padding: 10px;
     color: whitesmoke;
-    background-color: #4371a2;
+    /*background-color: #4371a2;*/
     border-radius: 5px;
     margin-top: 3%;
 }
@@ -127,7 +127,7 @@ div.blockResult
 {
     padding: 10px;
     color: whitesmoke;
-    background-color: #5b666c;
+    /*background-color: #5b666c;*/
     border-radius: 5px;
     margin-top: 3%;
     font-size:14px;
@@ -195,6 +195,41 @@ li.page-item
     background-color: #FFF;
 }
 
+.bookLink
+{
+    width:130px;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: #0c1717;
+    display: block;
+    font-family: Arial;
+    border: #1071FF 1px solid;
+    color: #1071FF;
+    padding: 5px 25px;
+    margin: 20px auto;
+    transition: .5s;
+    border-radius: 0px;
+}
+
+.bookLink:hover
+{
+    margin: 20px auto;
+    opacity:1;
+    top: 5px;
+    transition: .5s;
+    color: #ff1064;
+    border: #ff1074 1px solid;
+    border-radius: 10px;
+}
+
+.bookLink:active
+{
+    color: #000;
+    border: #1A1A1A 1px solid;
+    transition: .07s;
+    background-color: #FFF;
+}
+
 #backDiv
 {
     margin-top: 3%;
@@ -215,6 +250,11 @@ li.page-item
     width: 300px;
     font-size: 18px;
     border-radius: 5px;
+    line-height: inherit;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    padding: 0.375rem 0.75rem;
+
 }
 
 div.resultSearch
@@ -360,7 +400,7 @@ h6
 
     .headDiv
     {
-        background-color: #4d5357;
+        width:100%;
          margin-left: 2%;
         padding:2px 7px;
         border-radius: 3px;
@@ -400,8 +440,7 @@ h6
     div.wrapperBook
     {
         border-radius: 3px;
-        background: rgb(29,28,32);
-        background: linear-gradient(90deg, rgba(29,28,32,1) 0%, rgba(42,21,9,1) 51%, rgba(0,212,255,1) 100%);
+
         box-shadow: -3px 5px 10px 7px rgba(0, 0, 0, .4);
         margin:0;
         padding: 10px;

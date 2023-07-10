@@ -25,7 +25,7 @@ const Books = ({books, loading}) =>
                                 </div>
                                 <div className="infoBook">
                                     <p className="author">Автор: {volumeInfo['authors']}</p>
-                                    <Link className="pageLink" to="/book"
+                                    <Link className="bookLink" to="/book"
                                         state={{info:volumeInfo, id: id}}
                                     >Подробнее</Link>
                                 </div>

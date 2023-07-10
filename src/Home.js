@@ -25,8 +25,8 @@ export default function Home()
                 setLoading(true);
                 // выполняем запрос к google books
                 const response = await
-                    axios.get("https://www.googleapis.com/books/v1/volumes?q=search+terms&key="+apiKey+"&maxResult=40");
-                console.log(response.data.items);
+                    axios.get("https://www.googleapis.com/books/v1/volumes?q=subject:fantasy&key="+apiKey+"&maxResults=40");
+                console.log(response.data);
                 setBooks(response.data.items);
                 setLoading(false)
             }catch (error)

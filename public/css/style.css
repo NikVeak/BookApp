@@ -85,8 +85,6 @@ li.book
     animation: ani 1.5s forwards;
 }
 
-
-
 div.blockResult
 {
    height: 100px;
@@ -103,6 +101,7 @@ div.blockResult
 {
     color: #cf0000;
 }
+
 .pageLink:active
 {
     color: #0c1717;
@@ -238,6 +237,12 @@ li.page-item
 .headerName
 {
     background-color: dimgrey;
+}
+
+.imgCard
+{
+    width: 150px;
+    height:200px;
 }
 
 .inputBook

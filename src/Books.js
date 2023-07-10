@@ -19,7 +19,7 @@ const Books = ({books, loading}) =>
                     {
                         return(
                             <li id={id} key={id} className="book">
-                                <img alt={`${volumeInfo['title']}`} src={`http://books.google.com/books/content?id=${id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`}/>
+                                <img className="imgCard" alt={`${volumeInfo['title']}`} src={`http://books.google.com/books/content?id=${id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`}/>
                                 <div className="headBook">
                                     <h6 className="titleBook">{volumeInfo['title']}</h6>
                                 </div>

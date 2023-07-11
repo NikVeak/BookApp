@@ -3,11 +3,12 @@ import React,{useState, useEffect} from "react";
 const Pagination = ({bookPerPage, totalBooks, paginate})=>
 {
     const pageNumbers = []
-
+    // считаем количество страниц пагинации
     for (let i = 1; i < Math.ceil(totalBooks/bookPerPage);i++)
     {
         pageNumbers.push(i);
     }
+    // отображаем пагинацию
     return(
         <div>
             <ul className="PaginationBook">

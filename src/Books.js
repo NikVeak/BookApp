@@ -8,9 +8,9 @@ const Books = ({books, loading}) =>
 
     if (loading)
     {
-        console.log(books);
         return <h2>Loading...</h2>
     }
+    // отображаем список книг
     return(
     <div className="wrapper">
             <ul className="books-container">

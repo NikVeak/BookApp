@@ -44,6 +44,7 @@ const Search = ({books})=>
 
     const handleBlur = event =>
     {
+        // скрываем результат так, чтобы пользователь успел нажать на ссылку
         setTimeout(()=>
         {
             setShowResults(false);
@@ -55,7 +56,7 @@ const Search = ({books})=>
                    value={enter} onChange={handleChange}
                    onBlur={handleBlur}
                    className="inputBook" placeholder="Поиск"/>
-            {
+            { // если состояние показыать результат, то показываем
                 showResults ?
                 <div className="resultSearch">
                     {
@@ -76,7 +77,8 @@ const Search = ({books})=>
                                 })
                             }
                         </ul>
-                    }
+                    // иначе null
+                        }
             </div> : null}
         </div>
     );

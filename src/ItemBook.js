@@ -1,14 +1,12 @@
 import React from "react";
-import {Link, useLocation, useParams} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 
 const ItemBook = () =>{
+    // достаем данные о книги
     const location = useLocation();
     const data = location.state.info;
     const id = location.state.id;
-    console.log(data);
-    console.log();
     return(
         <div className="wrapperBook">
             <div className="headDiv">

@@ -51,7 +51,7 @@ const Search = ({books})=>
     }
     return(
         <div className="divResult">
-            <input type="text"
+            <input id="enterText" type="text"
                    value={enter} onChange={handleChange}
                    onBlur={handleBlur}
                    className="inputBook" placeholder="Поиск"/>

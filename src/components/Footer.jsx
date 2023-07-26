@@ -6,7 +6,7 @@ class Footer extends React.Component
     {
         return(
             <footer>
-                <p>@2023 by created GG WP EASY</p>
+                <p id="autor">@2023 by created GG WP EASY</p>
             </footer>
         );
     }

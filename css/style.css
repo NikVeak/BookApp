@@ -1,19 +1,64 @@
 
+header
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+body
+{
+    overflow-y: scroll;
+}
+
+.container
+{
+    padding:2px;
+    width:100%;
+    margin-top: 10%;
+    position: relative;
+}
+
 ul.books-container
 {
-    display: flex;
-    margin-top: 3%;
+    position: relative;
+    /*display: flex;*/
+    margin-top: 1%;
+   /* overflow-y: scroll;*/
+    width:100%;
+    margin-left: 10%;
+    /*height: 550px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: rgb(29,28,32);
+    background: linear-gradient(90deg, rgba(29,28,32,1) 0%, rgba(103,34,152,1) 33%, rgba(0,212,255,1) 100%);
+    animation: scroll 10s linear 1s infinite;*/
 }
+
+footer
+{
+    position: relative;
+    width: 100%;
+}
+
+@keyframes scroll
+{
+    100%{top:-100%;}
+}
+
 li.book
 {
     list-style-type: none;
-    display:inline-block;
-    width:400px;
+    /*display:inline-block;*/
+    width:500px;
     height: 500px;
     border-radius: 5px;
     border: grey solid 3px;
     padding:10px;
-    margin-left:5%;
+    margin-top:5%;
+    margin-left: 15%;
 }
 
 .favBook:hover
@@ -274,7 +319,7 @@ div.resultSearch
     overflow: scroll;
     overflow-x: auto;
     right: 5%;
-    top: 10%;
+    top: 17%;
     opacity: 0.99;
     box-shadow: -3px 5px 10px 7px rgba(0, 0, 0, .4);
     /*visibility: hidden;*/
@@ -310,7 +355,6 @@ div.resultSearch
     box-shadow: -3px 5px 10px 7px rgba(0, 0, 0, .4);
 
 }
-
 
 #linkBag:hover
 {

@@ -9,6 +9,7 @@ body {
   color:whitesmoke;
   background-image: url("images/backfon.png");
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 code {

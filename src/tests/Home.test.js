@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from '../Home';
+import Home from '../Home.jsx';
 import axios from "axios";
 import MockAdapter from 'axios-mock-adapter';
 import {render, waitFor} from "@testing-library/react";

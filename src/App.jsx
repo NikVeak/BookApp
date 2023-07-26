@@ -1,9 +1,8 @@
 import './App.css';
 import React from 'react';
-
 import {Routes, Route} from "react-router-dom";
-import Home from './Home'
-import ItemBook from "./ItemBook";
+import Home from './Home.jsx'
+import ItemBook from "./ItemBook.jsx";
 
 function App()
 {

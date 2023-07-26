@@ -1,40 +1,52 @@
-import React from "react";
+import React, {useRef} from "react";
 import {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
+import axios from "axios";
 
-const Search = ({books})=>
+const apiKey = "AIzaSyCqi37mzRrzkBrDZDb0BX9_IarX5iMOT88";
+
+const Search = ()=>
 {
+    const ref = useRef(null);
     const [enter, setEnter] = useState("");
     const [result, setResult] = useState([]);
     const [showResults, setShowResults] = useState(false)
+
     useEffect(()=>
     {
-        let res = [];
-        for (let i = 0; i < books.length; i++)
+        const keyEnterHandler = (event) =>
         {
-            if (books[i].volumeInfo['authors'] === undefined)
+            if (event.key === 'Enter')
             {
-                if (books[i].volumeInfo['title'].toLowerCase().includes(enter.toLowerCase()))
-                {
-                    console.log(books[i].volumeInfo['title']);
-                    res.push(books[i]);
-                }
-            }else
-            {
-                if (books[i].volumeInfo['title'].toLowerCase().includes(enter.toLowerCase())
-                || books[i].volumeInfo['authors'][0].toLowerCase().includes(enter.toLowerCase()))
-                {
-                    console.log(books[i].volumeInfo['title']);
-                    res.push(books[i]);
-                }
+                event.preventDefault();
+                console.log(result);
             }
         }
-        if (res.length > 0)
+
+
+
+        document.addEventListener('keydown', keyEnterHandler);
+        return () =>
         {
-            setShowResults(true);
+            document.removeEventListener('keydown', keyEnterHandler);
         }
-        console.log(res);
-        setResult(res);
+    }, []);
+
+    useEffect(()=>
+    {
+        const fetchBooks = async () => {
+            try {
+                const response = await axios.get(
+                    `https://www.googleapis.com/books/v1/volumes?q=${enter}&key=${apiKey}&maxResults=40`
+                );
+                setResult(response.data.items);
+                 setShowResults(true);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+        fetchBooks();
+
     }, [enter]);
     const handleChange = event =>
     {

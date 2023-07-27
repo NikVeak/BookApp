@@ -424,8 +424,8 @@ h6
         width:200px;
         position: absolute;
         float: none;
-        top:4%;
-        right: 20%;
+        top:28%;
+        right: 15%;
     }
     div.resultSearch
     {
@@ -469,6 +469,7 @@ h6
     {
         display: block;
         margin-top: 3%;
+        margin-left: 0;
     }
     li.book
     {
@@ -480,6 +481,7 @@ h6
         margin-top: 3%;
         margin-right: 10%;
         width:90%;
+        margin-left: 0;
     }
     .book
     {

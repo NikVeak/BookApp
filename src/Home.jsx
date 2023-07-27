@@ -19,12 +19,11 @@ const Home = () =>
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if (loading && startIndex !== 8)
+        if (loading)
         {
             console.log(startIndex);
-            setStartIndex(prevState => prevState+1);
             axios.get(
-                `https://www.googleapis.com/books/v1/volumes?q=subject:${category[startIndex]}&key=${apiKey}&startIndex=${startIndex}`
+                `https://www.googleapis.com/books/v1/volumes?q=subject:business&key=${apiKey}&startIndex=${startIndex}`
             ).then(response=>
             {
                 if (response.status === 429)
@@ -32,12 +31,13 @@ const Home = () =>
                     return(<h1>Oops, many requests !</h1>);
                 }
                 console.log(response.data);
+                setStartIndex(prevState => prevState+1);
                 setBooks([...books, ...response.data.items]);
             })
                 .finally(()=>setLoading(false)
                 );
         }
-        else if (loading && startIndex > 7)
+        else
         {
             setLoading(false)
         }

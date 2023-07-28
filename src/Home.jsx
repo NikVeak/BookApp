@@ -23,7 +23,8 @@ const Home = () =>
         {
             console.log(startIndex);
             axios.get(
-                `https://www.googleapis.com/books/v1/volumes?q=subject:business&key=${apiKey}&startIndex=${startIndex}`
+
+                `https://www.googleapis.com/books/v1/volumes?q=${category[startIndex]}&key=${apiKey}&startIndex=${startIndex}`
             ).then(response=>
             {
                 if (response.status === 429)

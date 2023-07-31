@@ -31,6 +31,10 @@ const Search = () => {
         const response = await axios.get(
           `https://www.googleapis.com/books/v1/volumes?q=${enter}&key=${apiKey}&maxResults=40`
         );
+        if (response.data.items.length === 0)
+        {
+          return <h4>Нет результатов :(</h4>
+        }
         setResult(response.data.items);
         setShowResults(true);
       } catch (error) {

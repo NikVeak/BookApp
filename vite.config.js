@@ -10,6 +10,11 @@ export default defineConfig({
     }),
     react(),
   ],
+  test:
+    {
+      globals:true,
+      environment: 'happy-dom'
+    },
   server: {
     port: 3000,
     host: true,
